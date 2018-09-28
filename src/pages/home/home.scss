@@ -1,0 +1,55 @@
+page-home {
+    .pane {
+        background-color: black;
+    }
+    .background{
+        background-color: lightgray;
+        width:100%;
+        height: 100%;
+        max-width: 500px;
+        margin: 0, auto;
+    }
+    
+    .ball-center-content {
+        position: relative;
+        
+    }
+    
+    .logo {
+        
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .ball{
+        
+        width: 100%;
+        
+    }
+    p.answer{
+        position: absolute;
+        margin: 20%;
+        top: 32%;
+        font-size: 2.4em;
+        width: 60%;
+        text-align: center;
+        color: rgb(150, 207, 245);
+        z-index: 100;
+        opacity:0.7
+    }
+    
+    .prediction {
+        text-align: center;
+        font-size: 24px;
+        padding: 10px;
+        color: black;
+        
+    }
+    
+    .prediction.show {
+        opacity: 1;
+    }
+    
+
+    // transition: opacity 1s linear;
+    //     opacity: 0;
+}

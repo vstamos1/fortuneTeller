@@ -1,0 +1,26 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Magic 8 ball</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ball-center-content padding" scroll="false">
+    <p class="prediction">{{ prediction }}</p>
+    <div class="background">
+  <img class="ball" [src]=imageUrl alt="8 ball" (click)="askTeller()">
+  
+ 
+</div><p class="answer">{{ answer }}</p>
+</ion-content>
+
+
+
