@@ -1,0 +1,11 @@
+<!-- Generated template for the Animate8ballComponent component -->
+
+
+<div no-padding class="ball-container">
+    <div
+       >
+      <img [@fade]="state" (@fade.done)="onDone($event)" [src]='imageSource'  alt="8ball" (click)="askFortune()">
+      <!-- <p class="text"> {{text}}</p> -->
+    <p class="answer">{{ answer }}</p>
+    </div>
+  </div>

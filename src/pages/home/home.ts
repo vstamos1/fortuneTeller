@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Image, ImageService, } from '../../app/magicBall';
 
 /**
  * Generated class for the HomePage page.
@@ -12,6 +13,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
+  providers: [ImageService]
 })
 export class HomePage {
   prediction = "Tap 8ball for an answer";
@@ -19,10 +21,14 @@ export class HomePage {
   predictionList;
   answer: string;
   imageUrl = "../assets/imgs/8ball.png";
-  imgArray = ["", "", ""];
+  imgArray :Image[];
   shakeTime = 0;
   num = 0;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  // images = [{"../assets/imgs/8ballDot0", "../assets/imgs/8ballDot1","../assets/imgs/8ballDot2"]
+  constructor(public navCtrl: NavController, public navParams: NavParams, private imageService: ImageService) {
+    //this.imgArray = imageService.images;
+    console.log("imgArry "  + this.imgArray);
+    
   }
 
   askTeller() {
@@ -31,6 +37,7 @@ export class HomePage {
     this.shakeTime = 0;
     this.answer = ""
     this.prediction = "Tap 8ball for an answer";
+    
     this.imageUrl = "../assets/imgs/8ball.png"
 
     setTimeout(() => {
@@ -63,28 +70,8 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.predictionList = [
-      "Signs point to yes",
-      "Yes",
-      "Reply hazy, try again",
-      "Without a doubt",
-      "My sources say no",
-      "As I see it, yes",
-      "You may rely on it",
-      "Concentrate and ask again",
-      "Outlook not so good",
-      "It is decidedly so",
-      "Better not tell you now",
-      "Very doubtful",
-      "Yes - definitely",
-      "It is certain",
-      "Cannot predict now",
-      "Most likely",
-      "Ask again later",
-      "My reply is no",
-      "Outlook good",
-      "Don't count on it"
-    ];
+    
+    
   }
 
 }
